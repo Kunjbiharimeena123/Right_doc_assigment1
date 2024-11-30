@@ -1,0 +1,24 @@
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Mobile</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>{{ person.name }}</td>
+        <td>{{ person.age }}</td>
+        <td>{{ person.gender }}</td>
+        <td>{{ person.mobile }}</td>
+        <td>
+          <button (click)="deletePerson(person.id)">Delete</button>
+          <button [routerLink]="['/edit', person.id]">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
